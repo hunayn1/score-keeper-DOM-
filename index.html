@@ -1,0 +1,127 @@
+<!-- Bulma CSS:     kind of similar to bootstrap
+                    we start by adding a link in head which we get from bulma css documentation
+                    
+                    we start by putting everything in container
+                    then in grid system we have class="columns" as parent and then multiple class="column" inside
+                    we can use class="column is-half" to set its space into half of all columns
+                    we can use class="column is-half is-offset-one-quarter" to center it on the page
+                
+                    card is just simply copy pasted from bulma docs
+                
+                Section:
+                    Bulma css asks us to put everything even including container class to be added as child inthe section element with
+                    class="section", it adds spaces everywhere around the section.
+                
+                Typography: 
+                    Headings:
+                            class="is-size-1/7 is used to set size and boldness on element"
+                            class="title is-1" is also a way to set font size and boldness
+                    Para:
+                            class="subtitle" to hightlight a paragraph and change paddings and margins
+                Buttons:
+                        class="button" to create bulma button
+                        class="button is-large/small/medium" to give button a size
+                        class="button is-primary/info/white/dark" to assign it a color
+
+                Select:
+                        class="select" to make a bulma select
+                        class="select is-primary" to make a primary color select
+                        class="select is-rounded" to make it rounded
+                label:
+                        since label becomes block element in bulma css using class="label"
+                        we make it inline using class="label is-inline"
+                    
+                Card-image:
+                        class="card-image" is used to add an image
+                        image must be inside <figure> element with class="image"
+                           class="image is-2by1" is used to set the image size into 2:1 ratio meaning reduced size
+                        and then at end end we use img tag to insert image.
+
+                Text Color:
+                        class="has-text-success/primary/dark" to change the color of text.
+
+
+button.disabled = true/fasle: to disable or enable a button.
+                    -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- <style>
+        .win {
+            color: green;
+        }
+
+        .lose {
+            color: red;
+        }
+    </style> -->
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dGFibGUlMjB0ZW5uaXN8ZW58MHx8MHx8fDA%3D"
+                                    alt="ping pong">
+                            </figure>
+                        </div>
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Ping Pong Score Keeper
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <h1 class="title is-1"><span id="p1Display">0</span> to <span id="p2Display">0</span>
+                                </h1>
+                                <p class="subtitle">Use the buttons below to keep score</p>
+
+                                <label class="label is-large is-inline" for="select">Playing to:</label>
+                                <div class="select is-rounded is-link">
+                                    <select name="winner" id="select">
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <button id="p1Button" class="card-footer-item button is-primary">+1 player one</button>
+                            <button id="p2Button" class="card-footer-item button is-success">+1 player two</button>
+                            <button id="reset" class="card-footer-item button is-danger">Reset</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- <script src="app.js"></script> -->
+    <script src="app(refactored).js"></script>
+
+</body>
+
+</html>
